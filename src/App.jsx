@@ -373,7 +373,7 @@ function NewOrderModal({ user, onClose, onCreated }) {
         dropLocation: form.dropLocation.trim(),
         itemDetails: form.itemDetails.trim(),
         phoneNumber: form.phoneNumber.trim(),
-        price: parseFloat(form.price),
+        price: parseFloat(form.price) || 0,
         optionalTip: parseFloat(form.optionalTip) || 0,
         status: "PENDING",
         acceptedBy: null,
