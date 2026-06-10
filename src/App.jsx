@@ -357,6 +357,7 @@ function NewOrderModal({ user, onClose, onCreated }) {
   function set(field, val) { setForm(f => ({ ...f, [field]: val })); }
 
   async function handleSubmit() {
+    console.log("price value:", form.price, parseFloat(form.price));
     setError("");
     const { pickupLocation, dropLocation, itemDetails, phoneNumber, price } = form;
     if (!pickupLocation || !dropLocation || !itemDetails || !phoneNumber || !price)
