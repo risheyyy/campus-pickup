@@ -472,7 +472,7 @@ function OrderCard({ order, currentUser, onAccept, onUpdateStatus, showAccept })
 
       <div className="card-detail">
         <span className="detail-chip">📞 <strong>{order.phoneNumber}</strong></span>
-        <span className="detail-chip">💰 ₹<strong>{order.price}</strong></span>
+        <span className="detail-chip">💰 ₹<strong>{Number(order.price).toFixed(0)}</strong></span>
         {order.optionalTip > 0 && (
           <span className="detail-chip">🎁 Tip ₹<strong>{order.optionalTip}</strong></span>
         )}
