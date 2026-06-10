@@ -678,7 +678,7 @@ function DeliveryDashboard({ user }) {
   const myActive = mine.filter(o => o.status !== "DELIVERED");
   const myDone = mine.filter(o => o.status === "DELIVERED");
 
-  const earning = mine.reduce((s, o) => s + o.price + (o.optionalTip || 0), 0);
+  const earning = mine.reduce((s, o) => s + (parseFloat(o.price) || 0) + (parseFloat(o.optionalTip) || 0), 0);
 
   return (
     <>
