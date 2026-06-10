@@ -366,7 +366,7 @@ function NewOrderModal({ user, onClose, onCreated }) {
     setLoading(true);
     try {
       const order = {
-        orderId: "ORD-" + genId(),
+        orderId: "ORD-" + Math.random().toString(36).slice(2, 8).toUpperCase(),
         userId: user.uid,
         userName: user.name,
         pickupLocation: form.pickupLocation.trim(),
